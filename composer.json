@@ -2,9 +2,10 @@
     "name": "repat/shipping-service-provider-check",
     "type": "application",
     "description": "Simple trial-and-error library for testing which shipping provider a tracking number belongs to",
-    "keywords": ["scraper", "goutte", "shipping", "provider", "tracking", "parcel", "number", "id", "dhl", "gls", "dpd", "fedex", "hermes"],
+    "keywords": ["scraper", "goutte", "shipping", "provider", "tracking", "parcel", "number", "id", "dhl", "gls", "dpd", "fedex", "hermes", "tnt", "ups"],
     "homepage": "https://github.com/repat/shipping-service-provider-check",
     "license": "MIT",
+    "version" : "0.1",
     "authors": [
         {
             "name": "repat",

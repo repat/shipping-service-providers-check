@@ -13,21 +13,20 @@ Available on Packagist:
 
 ## Usage
 
-Check out out `config.php`.
+Check out `src/ShippingServiceProvidersCheck/default_providers.php` for configuration.
 
 ```php
 use repat\ShippingServiceProvidersCheck\Check;
 
 $check = new Check($trackingId);
 
-$shippingProviders = require 'config.php';
-
 // checks all providers, returns an array like 
-// [ "dhl" => true,
+// [
+//   "dhl" => true,
 //   "gls" => false,
 //    ...
 // ]
-$check->checkAll($shippingProviders);
+$check->checkAll();
 
 // gets all available providers
 $check->getProviders();
@@ -35,14 +34,17 @@ $check->getProviders();
 // tbc
 ```
 
+If you want to fix a shipping provider, you can give checkAll() a parameter and the entry will be replaced.
+This will be extended to adding your own providers soon.
+
 ## License 
 * see [LICENSE](https://github.com/repat/shipping-service-providers-check/blob/master/LICENSE) file
-r
+
 ## Changelog
-* 0.0.1 initial release
+* 0.1 fixed to working release (dhl, hermes, gls, ups)
+* 0.0.1 initial release for testing
 
 ## Contact
-#### Developer/Company
 * Homepage: https://repat.de
 * e-mail: repat@repat.de
 * Twitter: [@repat123](https://twitter.com/repat123 "repat123 on twitter")
