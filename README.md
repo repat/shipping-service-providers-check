@@ -4,6 +4,8 @@ This is a PHP package for finding out, which shipping service provider a trackin
 
 It's theoretically possible that a tracking ID is valid at multiple providers. Therefore it makes the most sense to use `checkAll()` to get an array of answers and pick the most likely one.
 
+Blog Article (German): https://repat.de/2016/07/herausfinden-zu-welchem-versanddienstleister-eine-tracking-id-gehoert/
+
 ### Supported Providers
 * DHL
 * GLS
