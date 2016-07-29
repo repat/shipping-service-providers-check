@@ -5,7 +5,7 @@
     "keywords": ["scraper", "goutte", "shipping", "provider", "tracking", "parcel", "number", "id", "dhl", "gls", "dpd", "fedex", "hermes", "tnt", "ups"],
     "homepage": "https://github.com/repat/shipping-service-provider-check",
     "license": "MIT",
-    "version" : "0.1",
+    "version" : "0.1.1",
     "authors": [
         {
             "name": "repat",
