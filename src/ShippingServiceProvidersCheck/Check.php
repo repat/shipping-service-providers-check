@@ -21,7 +21,7 @@ class Check
         $defaultShippingProviders = include __DIR__ . '/default_providers.php';
 
         if (isset($shippingProviders)) {
-            $shippingProviders = array_replace($defaultShippingProviders, $shippingProviders);
+            $shippingProviders = array_merge($defaultShippingProviders, $shippingProviders);
         } else {
             $shippingProviders = $defaultShippingProviders;
         }

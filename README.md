@@ -1,13 +1,17 @@
 # shipping-service-providers-check
 
-`UNDER DEVELOPMENT`
-
 This is a PHP package for finding out, which shipping service provider a tracking ID belongs to. Since it's used for Germany, in production the service providers available here are the main focus. Contributions are welcome!
 
 It's theoretically possible that a tracking ID is valid at multiple providers. Therefore it makes the most sense to use `checkAll()` to get an array of answers and pick the most likely one.
 
+### Supported Providers
+* DHL
+* GLS
+* UPS
+* Hermes
+
 ## Installation
-Available on Packagist:
+Available via composer on [Packagist](https://packagist.com):
 
 `composer require repat/shipping-service-providers-check`
 
@@ -28,19 +32,31 @@ $check = new Check($trackingId);
 // ]
 $check->checkAll();
 
+// replacing providers or with your own providers, see below
+$check->checkAll($extraProviders);
+
 // gets all available providers
 $check->getProviders();
-
-// tbc
 ```
 
-If you want to fix a shipping provider, you can give checkAll() a parameter and the entry will be replaced.
-This will be extended to adding your own providers soon.
+### Replacing providers and adding your own providers
+If you want to add your own provider, you can provide `checkAll()` with an array like this. Any contributions are most welcome.
+
+```php
+"SP" => [
+        'base_url' => "http://example.com/tracking_id=",
+        'search_string' => 'This is the string that will be looked for',
+        'filter' => 'HTML tag to look for',
+     ],
+// ...
+```
+It's a positive lookup, so you will get `true` if `search_string` was found in the HTML tag `filter`. For information on filters, see [Goutte](https://github.com/FriendsOfPHP/Goutte).
 
 ## License 
 * see [LICENSE](https://github.com/repat/shipping-service-providers-check/blob/master/LICENSE) file
 
 ## Changelog
+* 0.1.1 adding your own providers
 * 0.1 fixed to working release (dhl, hermes, gls, ups)
 * 0.0.1 initial release for testing
 
