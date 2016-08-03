@@ -1,8 +1,8 @@
 # shipping-service-providers-check
 
-This is a PHP package for finding out, which shipping service provider a tracking ID belongs to. Since it's used for Germany, in production the service providers available here are the main focus. Contributions are welcome!
+This is a PHP package for finding out, which shipping service provider a tracking ID belongs to. Since it's used for Germany the service providers available here are the main focus. Contributions are welcome!
 
-It's theoretically possible that a tracking ID is valid at multiple providers. Therefore it makes the most sense to use `checkAll()` to get an array of answers and pick the most likely one.
+It's theoretically possible that a tracking ID is valid at multiple providers. That's why you get an array back that could contain multiple `true`s.
 
 Blog Article (German): https://repat.de/2016/07/herausfinden-zu-welchem-versanddienstleister-eine-tracking-id-gehoert/
 
