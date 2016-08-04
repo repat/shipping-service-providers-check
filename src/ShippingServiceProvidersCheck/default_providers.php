@@ -21,6 +21,9 @@ return [
         "filter" => "h2",
         "search_string" => "Tracking Detail",
     ],
+    "amzl" => [
+        "regex" => '/AF[\d]{10}/',
+    ],
     // "fedex" => [
     // "base_url" => 'https://www.fedex.com/apps/fedextrack/?action=track&tracknumbers=',
     // "filter" => null,
